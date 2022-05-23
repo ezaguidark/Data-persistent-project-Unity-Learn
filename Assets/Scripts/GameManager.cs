@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // this funtion loads userData from json at start the game.
         LoadUserData();
     }
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
                 score_1 = user.highScore;
                 player_1 = user.highPlayerName;
             }
+            // Maybe this is not the best way but it defines the best high scores.
             if (user.highScore > score_2 && user.highScore < score_1)
             {
                 score_2 = user.highScore;
